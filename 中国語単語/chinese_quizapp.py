@@ -51,7 +51,7 @@ with st.form(key=f"q_form_{current_idx}"):
 
 if submit_btn and not st.session_state.answered:
     clean_user = user_input.strip()
-    clean_target = str(current_q["chinese"]).strip()
+    clean_target = str(current_q["Chinese"]).strip()
     
     st.session_state.answered = True
     if clean_user == clean_target:
@@ -65,7 +65,7 @@ if st.session_state.answered:
     if st.session_state.is_correct:
         st.success("⭕️ 正解！")
     else:
-        st.error(f"❌ 不正解... 正解は: **{current_q['chinese']}**")
+        st.error(f"❌ 不正解... 正解は: **{current_q['Chinese']}**")
 
     if st.button("次の問題へ ➔"):
         st.session_state.current_idx += 1
